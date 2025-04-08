@@ -1,0 +1,33 @@
+basePath: /
+host: localhost:8000
+info:
+  contact:
+    email: support@example.com
+    name: API Support
+    url: http://www.example.com/support
+  description: This API provides a boilerplate for hackathon projects with a simple
+    "Hello, World!" endpoint and Swagger UI.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: Hackathon Boilerplate API
+  version: "1.0"
+paths:
+  /hello:
+    get:
+      description: Returns a simple "Hello, World!" message.
+      produces:
+      - text/plain
+      responses:
+        "200":
+          description: Hello, World!
+          schema:
+            type: string
+      summary: Hello World Endpoint
+      tags:
+      - Example
+schemes:
+- http
+- https
+swagger: "2.0"

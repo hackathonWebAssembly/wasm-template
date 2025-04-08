@@ -1,0 +1,46 @@
+{
+    "schemes": [
+        "http",
+        "https"
+    ],
+    "swagger": "2.0",
+    "info": {
+        "description": "This API provides a boilerplate for hackathon projects with a simple \"Hello, World!\" endpoint and Swagger UI.",
+        "title": "Hackathon Boilerplate API",
+        "termsOfService": "http://swagger.io/terms/",
+        "contact": {
+            "name": "API Support",
+            "url": "http://www.example.com/support",
+            "email": "support@example.com"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0"
+    },
+    "host": "localhost:8000",
+    "basePath": "/",
+    "paths": {
+        "/hello": {
+            "get": {
+                "description": "Returns a simple \"Hello, World!\" message.",
+                "produces": [
+                    "text/plain"
+                ],
+                "tags": [
+                    "Example"
+                ],
+                "summary": "Hello World Endpoint",
+                "responses": {
+                    "200": {
+                        "description": "Hello, World!",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

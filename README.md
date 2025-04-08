@@ -18,11 +18,17 @@ Welcome to the WASM Hackathon! This boilerplate provides a simple starting point
 
 Before you begin, ensure you have the following installed:
 
-- **Go**: Version 1.23
-- **TinyGo**: Version 0.33 or later
+- **Go**: Version 1.23 or later
+- **TinyGo**: Version 0.33 or later ([Installation Guide](https://tinygo.org/getting-started/))
 - **wash CLI**: Version 0.35.0 ([Installation Guide](https://wasmcloud.dev/docs/installation))
 - **wasmtime**: Version 25.0.0 (optional, for local testing)
+- **swag CLI**: Version 1.8.12 or later ([Installation Guide](https://github.com/swaggo/swag))
+- **wasm-tools**: Install using the following command:
 
+  ```bash
+  cargo install --locked wasm-tools
+  ```
+  
 ## Building the Component
 
 To build the WebAssembly component, use the `wash` CLI:
@@ -33,15 +39,15 @@ wash build
 
 This will generate a `.wasm` file in the `./build` directory.
 
-## Running Locally with wasmtime
+## Updating Swagger Documentation
 
-If you want to test the component locally without deploying it to wasmCloud, you can use `wasmtime`:
+If you make changes to the API endpoints or their annotations, you need to regenerate the Swagger documentation. Use the `swag init` command to update the `docs/swagger.json` file:
 
 ```bash
-wasmtime serve -Scommon ./build/http_hello_world_s.wasm
+swag init -g main.go
 ```
 
-Then, open your browser and navigate to `http://localhost:8000/hello` to see the "Hello, World!" response.
+This command scans the `main.go` file for Swagger annotations and regenerates the OpenAPI specification. Ensure you run this command before rebuilding the component.
 
 ## Running with wasmCloud
 
