@@ -1,6 +1,6 @@
 # WASM Hackathon Boilerplate: HTTP Hello World
 
-![WASM Hackathon](docs/logo.png)
+![WASM Hackathon](resources/logo.png)
 
 Welcome to the WASM Hackathon! This boilerplate provides a simple starting point for building WebAssembly (WASM) applications using [wasmCloud](https://wasmcloud.dev). It includes a "Hello, World!" HTTP endpoint and embedded Swagger UI for API documentation.
 
