@@ -19,8 +19,6 @@ wasmcloud.lock
 .DS_Store
 Thumbs.db
 
-# Swagger generated files
-docs/swagger.json
 
 # Generated code
 gen/*.go
