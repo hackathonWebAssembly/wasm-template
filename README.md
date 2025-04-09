@@ -20,9 +20,14 @@ Before you begin, ensure you have the following installed:
 
 - **Go**: Version 1.23 or later
 - **TinyGo**: Version 0.33 or later ([Installation Guide](https://tinygo.org/getting-started/))
-- **wash CLI**: Version 0.35.0 ([Installation Guide](https://wasmcloud.dev/docs/installation))
-- **wasmtime**: Version 25.0.0 (optional, for local testing)
+- **wash CLI**: Version 0.35.0 ([Installation Guide](https://wasmcloud.com/docs/installation))
 - **swag CLI**: Version 1.8.12 or later ([Installation Guide](https://github.com/swaggo/swag))
+- **Rust and Cargo**: Install using the following command:
+  
+  ```bash
+  curl https://sh.rustup.rs -sSf | sh
+  ```
+  
 - **wasm-tools**: Install using the following command:
 
   ```bash
