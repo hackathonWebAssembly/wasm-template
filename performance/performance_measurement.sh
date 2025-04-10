@@ -73,7 +73,7 @@ perform_request_cycle() {
     fi
 
     # --- Petición POST /encode ---
-    local post_payload="{\"unique_id\": $current_unique_id, \"cto_name\": \"$current_cto_name\"}"
+    local post_payload="{\"id\": $current_unique_id, \"name\": \"$current_cto_name\"}"
     local post_response
     # Ejecuta curl con timeout, capturando cuerpo y código HTTP
     post_response=$(timeout "$REQUEST_TIMEOUT" curl -s -w "\n%{http_code}" -X POST \
